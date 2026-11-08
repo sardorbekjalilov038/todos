@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=b7a9f520-a102-472b-bcb0-15415de5569e
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-area">
+                <div class="clipboard-icon">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </div>
+                <h1>My Todo List</h1>
+            </div>
+            <select class="theme-select">
+                <option value="mint">mint</option>
+                <option value="dark">dark</option>
+            </select>
+        </div>
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Add new...">
+            <button class="add-btn" id="addBtn"> Add</button>
+        </div>  
+        <div class="controls-section">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+            <select class="filter-select" id="filterSelect">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+        <div class="task-container">
+            <div id="taskListWrapper">
+                <p class="empty-text" id="emptyText">Empty... add your first task</p>
+                <ul class="task-list" id="taskList" style="display: none;"></ul>
+            </div>
+            <div class="task-footer">
+                Total: <span id="totalCount">0</span>
+            </div>
+        </div>
+        <div class="actions-footer">
+            <button class="action-btn btn-completed" id="setAllCompletedBtn">Set All Completed</button>
+            <button class="action-btn btn-clear-completed" id="clearAllCompletedBtn">Clear All Completed</button>
+            <button class="action-btn btn-clear-all" id="clearAllBtn">Clear All</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
